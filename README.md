@@ -13,9 +13,12 @@ _______________________________________________________________________________
 
 ### Implementation Checklist
 
+- main sc   sc           
 - rdcm list containers (list all container)
 - rdcm list images (list all images)
-- rdcm list start (start a specific container)
-- rdcm list stop (stop a specific container)
-- rdcm list pull (pull a new Docker image)
+_______________________________________________________________________________
+- main sc   sc    positional_argument           
+- rdcm list start <container_id>  (start a specific container)
+- rdcm list stop  <container_id> (stop a specific container)
+- rdcm list pull <container_id> (pull a new Docker image)
 _______________________________________________________________________________
