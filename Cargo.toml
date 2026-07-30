@@ -11,5 +11,20 @@ clap = {
     features = ["derive"] 
 }
 
+#______________________________________________________________________________
+
+# To be added:
+
 # An asynchronus Rust client for interacting with the Docker API
-bollard = "0.21.0"
+# 1. bollard = "0.21.0"
+
+# An asynchronus runtime for Rust
+# 2. tokio = {
+#     version = "1.53.1",
+#     features = ["full"]
+# }
+
+# Common utilities and extension traits for the futures-rs library.
+# 3. futures-util = "0.3.33"
+
+#______________________________________________________________________________
