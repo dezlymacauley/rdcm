@@ -13,6 +13,8 @@ _______________________________________________________________________________
 
 ### Implementation Checklist
 
+Note: `sc` stands for subcommand
+
 - main sc   sc           
 - rdcm list containers (list all container)
 - rdcm list images (list all images)
