@@ -27,7 +27,6 @@ pub struct Cli {
 pub enum Command {
     // This is `rdcm list`
     // `list` is a subcommand that also has its own list of valid subcommands
-
     List {
         // These are sub-commands for the sub-command called `list`
         #[command(subcommand)]
@@ -41,16 +40,18 @@ pub enum Command {
 
 #[derive(Subcommand)]
 pub enum ListCommands {
-    
-    // NOTE: If you can add a descripion of what a command does 
+    // NOTE: If you can add a descripion of what a command does
     // by using `///` followed by a comment
-
     /// List containers
-    Containers,
-    Images,
-    Start, // This will have a positional argument <container_id>
-    Stop,  // This will have a positional argument <container_id>
-    Pull,  // This will have a positional argument <container_id>
+    Containers {
+        // This is: list containers --all
+        #[arg(short, long)]
+        all: bool,
+    },
+    // Images,
+    // Start, // This will have a positional argument <container_id>
+    // Stop,  // This will have a positional argument <container_id>
+    // Pull,  // This will have a positional argument <container_id>
 }
 
 //_____________________________________________________________________________

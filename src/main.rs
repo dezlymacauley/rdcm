@@ -1,27 +1,22 @@
-// SECTION: Modules
-
-
 mod cli;
 mod docker;
-
-use cli::{Cli, Command};
-
-//_____________________________________________________________________________
-
-// SECTION: External Dependencies
-
 use clap::Parser;
-
-//_____________________________________________________________________________
+use cli::{Cli, Command, ListCommands};
 
 fn main() {
-    let args = Cli::parse();
+    // Parse the CLI input
+    let args: Cli = Cli::parse();
 
+    // Handle the commands
     match args.command {
-       // `list_command: _` tells Rust that I am not using the value from
-       // the `list_command` field inside the match arm
-       Command::List { list_command: _ } => {
-            println!("Listing all containers...");
-       }
+        Command::List { list_command } => match list_command {
+            ListCommands::Containers { all } => {
+                if all {
+                    println!("Listing all containers");
+                } else {
+                    println!("Listing running containers");
+                }
+            }
+        },
     }
 }
