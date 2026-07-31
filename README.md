@@ -24,3 +24,23 @@ _______________________________________________________________________________
 - rdcm list stop  <container_id> (stop a specific container)
 - rdcm list pull <container_id> (pull a new Docker image)
 _______________________________________________________________________________
+
+To view a list of the subcommands that can be used with the 
+list subcommand do this
+
+```bash
+cargo dev -- \
+    list help
+```
+
+For the binary, this would be `rdcm list help`
+
+_______________________________________________________________________________
+
+To run `rdcm list containers`
+
+```bash
+cargo dev -- \
+    list containers
+```
+_______________________________________________________________________________
