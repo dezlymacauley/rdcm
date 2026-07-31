@@ -39,6 +39,9 @@ Look for this line
 ```
 
 This line tells the Docker CLI where to find the Docker Engine.
+
+This is the specific part you use in `src/docker.rs`
+`/var/run/docker.sock`
 _______________________________________________________________________________
 
 ### Usage

@@ -1,11 +1,16 @@
 mod cli;
-mod docker;
-use clap::Parser;
 use cli::{Cli, Command, ListCommands};
+
+mod docker;
+use docker::DockerClient;
+
+use clap::Parser;
 
 fn main() {
     // Parse the CLI input
     let args: Cli = Cli::parse();
+
+    let docker_client = DockerClient::new();
 
     // Handle the commands
     match args.command {
