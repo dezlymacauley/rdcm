@@ -11,12 +11,12 @@ clap = {
     features = ["derive"] 
 }
 
+# An asynchronus Rust client for interacting with the Docker API
+bollard = "0.21.0"
+
 #______________________________________________________________________________
 
 # To be added:
-
-# An asynchronus Rust client for interacting with the Docker API
-# 1. bollard = "0.21.0"
 
 # An asynchronus runtime for Rust
 # 2. tokio = {

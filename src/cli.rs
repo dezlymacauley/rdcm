@@ -45,6 +45,8 @@ pub enum ListCommands {
     /// List containers
     Containers {
         // This is: list containers --all
+
+        /// list running and stopped containers
         #[arg(short, long)]
         all: bool,
     },

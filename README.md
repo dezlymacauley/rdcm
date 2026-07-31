@@ -25,6 +25,24 @@ _______________________________________________________________________________
 - rdcm list pull <container_id> (pull a new Docker image)
 _______________________________________________________________________________
 
+### How to get Docker settings
+
+Make sure that Docker is running and then run this command:
+
+```bash
+docker context inspect
+```
+
+Look for this line
+```
+"Host": "unix:///var/run/docker.sock"
+```
+
+This line tells the Docker CLI where to find the Docker Engine.
+_______________________________________________________________________________
+
+### Usage
+
 To view a list of the subcommands that can be used with the 
 list subcommand do this
 
