@@ -16,7 +16,8 @@ _______________________________________________________________________________
 Note: `sc` stands for subcommand
 
 - main sc   sc           
-- rdcm list containers (list all container)
+- rdcm list containers 
+- rdcm list containers --all (list all container)
 - rdcm list images (list all images)
 _______________________________________________________________________________
 - main sc   sc    positional_argument           
@@ -44,7 +45,7 @@ This is the specific part you use in `src/docker.rs`
 `/var/run/docker.sock`
 _______________________________________________________________________________
 
-### Usage
+### Testing
 
 To view a list of the subcommands that can be used with the 
 list subcommand do this
@@ -71,5 +72,13 @@ To run `rdcm list containers --all`
 ```bash
 cargo dev -- \
     list containers --all
+```
+_______________________________________________________________________________
+
+To run `rdcm list images`
+
+```bash
+cargo dev -- \
+    list images
 ```
 _______________________________________________________________________________

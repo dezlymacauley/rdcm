@@ -30,6 +30,21 @@ async fn main() {
                     Err(e) => eprintln!("Error listing containers: {}", e),
                 }
             }
+            ListCommands::Images => {
+                println!("Printing images:");
+                match docker_client.list_images().await {
+                    Ok(images) => {
+                        for image in images {
+                            println!(
+                                "{}\t{}",
+                                image.id,
+                                image.repo_tags.join(",")
+                            );
+                        }
+                    }
+                    Err(e) => eprintln!("Error listing images: {}", e),
+                }
+            }
         },
     }
 }

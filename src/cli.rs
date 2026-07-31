@@ -50,7 +50,9 @@ pub enum ListCommands {
         #[arg(short, long)]
         all: bool,
     },
-    // Images,
+
+    /// List images
+    Images
     // Start, // This will have a positional argument <container_id>
     // Stop,  // This will have a positional argument <container_id>
     // Pull,  // This will have a positional argument <container_id>
